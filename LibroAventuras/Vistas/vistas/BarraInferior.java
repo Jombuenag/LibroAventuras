@@ -1,35 +1,57 @@
 package vistas;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.border.BevelBorder;
-import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.border.BevelBorder;
 
 
 public class BarraInferior extends JPanel {
 
+		private Personaje personaje;
 	
 	public BarraInferior(VistaPrincipal vistaPrincipal) {
 		setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(192, 192, 192), Color.LIGHT_GRAY, null, null));
 	    setBounds(150,150,445,100);
 	    setLayout(null);
 	    
-	    JLabel lblPersonaje = new JLabel("Personaje");
-	    lblPersonaje.setHorizontalAlignment(SwingConstants.CENTER);
-	    lblPersonaje.setBounds(0, 0, 100, 100);
-	    add(lblPersonaje);
+	    JButton btnPersonaje = new JButton("Personaje");
+	    btnPersonaje.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent e) {
+	    		Personaje frame =  new Personaje();
+	    		frame.setVisible(true);
+	    	}
+	    });
+	    btnPersonaje.setHorizontalAlignment(SwingConstants.CENTER);
+	    btnPersonaje.setBounds(0, 0, 100, 100);
+	    btnPersonaje.setContentAreaFilled(false);
+	    btnPersonaje.setBorderPainted(false);
+	    add(btnPersonaje);
 	    
-	    JLabel lblInventario = new JLabel("Inventario");
-	    lblInventario.setHorizontalAlignment(SwingConstants.CENTER);
-	    lblInventario.setBounds(100, 0, 100, 100);
-	    add(lblInventario);
+	    JButton btnInventario = new JButton("Inventario");
+	    btnInventario.setHorizontalAlignment(SwingConstants.CENTER);
+	    btnInventario.setBounds(100, 0, 100, 100);
+	    btnInventario.setContentAreaFilled(false);
+	    btnInventario.setBorderPainted(false);
+	    add(btnInventario);
 	    
-	    JLabel lblOpciones = new JLabel("Opciones");
-	    lblOpciones.setHorizontalAlignment(SwingConstants.CENTER);
-	    lblOpciones.setBounds(345, 0, 100, 100);
-	    add(lblOpciones);
+	    JButton btnOpciones = new JButton("Opciones");
+	    btnOpciones.setHorizontalAlignment(SwingConstants.CENTER);
+	    btnOpciones.setBounds(345, 0, 100, 100);
+	    btnOpciones.setContentAreaFilled(false);
+	    btnOpciones.setBorderPainted(false);
+	    add(btnOpciones);
+	    
+	    JButton btnDados = new JButton("Dados");
+	    btnDados.setHorizontalAlignment(SwingConstants.CENTER);
+	    btnDados.setBounds(200, 0, 100, 100);
+	    btnDados.setContentAreaFilled(false);
+	    btnDados.setBorderPainted(false);
+	    add(btnDados);
 		
 	}
 }
