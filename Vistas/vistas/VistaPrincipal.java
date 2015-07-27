@@ -17,7 +17,7 @@ public class VistaPrincipal extends JFrame {
 		setTitle("Libro Aventuras");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 475, 600);
+		setBounds(100, 100, 500, 625);
 		
 		contentPane =  new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -26,15 +26,15 @@ public class VistaPrincipal extends JFrame {
 		
 		TextArea textArea = new TextArea();
 		textArea.setEditable(false);
-		textArea.setBounds(20, 35, 425, 400);
+		textArea.setBounds(20, 35, 450, 400);
 		contentPane.add(textArea);
 		
 		barraInferior = new BarraInferior(this);
-		barraInferior.setBounds(0,475,470,100);
+		barraInferior.setBounds(0,496,500,101);
 		contentPane.add(barraInferior);
 		
 		botonesEleccion = new BotonesEleccion(this);
-		botonesEleccion.setBounds(10,435,470,100);
+		botonesEleccion.setBounds(0,440,494,45);
 		contentPane.add(botonesEleccion);
 		
 		
