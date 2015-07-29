@@ -4,6 +4,7 @@ import java.awt.TextArea;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JTextArea;
 
 
 public class VistaPrincipal extends JFrame {
