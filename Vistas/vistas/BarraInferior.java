@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
@@ -79,5 +78,29 @@ public class BarraInferior extends JPanel {
 	    btnGrimorio.setBorderPainted(false);
 	    add(btnGrimorio);
 		
+	}
+
+	public Personaje getPersonaje() {
+		return personaje;
+	}
+
+	public void setPersonaje(Personaje personaje) {
+		this.personaje = personaje;
+	}
+
+	public Opciones getOpciones() {
+		return opciones;
+	}
+
+	public void setOpciones(Opciones opciones) {
+		this.opciones = opciones;
+	}
+
+	public Inventario getInventario() {
+		return inventario;
+	}
+
+	public void setInventario(Inventario inventario) {
+		this.inventario = inventario;
 	}
 }
