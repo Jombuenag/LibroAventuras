@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 
+import popUps.Dados;
 import popUps.Inventario;
 import popUps.Opciones;
 import popUps.Personaje;
@@ -19,6 +20,7 @@ public class BarraInferior extends JPanel {
 		private Personaje personaje;
 		private Inventario inventario;
 		private Opciones opciones;
+		private Dados dados;
 	
 	public BarraInferior(VistaPrincipal vistaPrincipal) {
 		setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(192, 192, 192), Color.LIGHT_GRAY, null, null));
@@ -30,7 +32,6 @@ public class BarraInferior extends JPanel {
 	    	public void actionPerformed(ActionEvent e) {
 	    		Personaje popUpPersonaje =  new Personaje();
 	    		popUpPersonaje.setVisible(true);
-	    		
 	    	}
 	    });
 	    btnPersonaje.setHorizontalAlignment(SwingConstants.CENTER);
@@ -66,6 +67,12 @@ public class BarraInferior extends JPanel {
 	    add(btnOpciones);
 	    
 	    JButton btnDados = new JButton("Dados");
+	    btnDados.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent e) {
+	    		Dados popUpDados = new Dados();
+	    		popUpDados.setVisible(true);
+	    	}
+	    });
 	    btnDados.setHorizontalAlignment(SwingConstants.CENTER);
 	    btnDados.setBounds(200, 0, 100, 100);
 	    btnDados.setContentAreaFilled(false);

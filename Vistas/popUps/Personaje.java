@@ -7,7 +7,6 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JSeparator;
 import javax.swing.JTextField;
 
 public class Personaje extends JFrame {
@@ -17,7 +16,6 @@ public class Personaje extends JFrame {
 	private JTextField txtFuerza;
 	private JTextField txtField;
 
-	private Image imagenPersonaje;
 	
 	public Personaje() {
 		setTitle("Personaje");
@@ -55,13 +53,6 @@ public class Personaje extends JFrame {
 		lblGenero.setBounds(175, 40, 70, 30);
 		getContentPane().add(lblGenero);
 		
-		
-		JSeparator separator = new JSeparator();
-		separator.setBackground(Color.GRAY);
-		separator.setForeground(Color.DARK_GRAY);
-		separator.setBounds(0, 75, 345, 2);
-		getContentPane().add(separator);
-		
 		JLabel lblVida = new JLabel("Vida :");
 		lblVida.setBounds(10, 90, 50, 50);
 		getContentPane().add(lblVida);
@@ -93,10 +84,17 @@ public class Personaje extends JFrame {
 		getContentPane().add(txtField);
 		
 		Image imgPersonaje = new ImageIcon(this.getClass().getResource(("/PersonajeSuperior.png"))).getImage();
-		JLabel lblImage = new JLabel("Image");
-		lblImage.setBounds(0, 0, 345, 75);
-		lblImage.setIcon(new ImageIcon(imgPersonaje));
-		getContentPane().add(lblImage);
+		JLabel lblImageSup = new JLabel("ImageSup");
+		lblImageSup.setBounds(0, 0, 345, 75);
+		lblImageSup.setIcon(new ImageIcon(imgPersonaje));
+		getContentPane().add(lblImageSup);
+		
+		
+		Image imgPersonaje2 = new ImageIcon(this.getClass().getResource(("/PersonajeInferior.png"))).getImage();
+		JLabel lblImageInf = new JLabel("ImageInf");
+		lblImageInf.setBounds(0, 75, 345, 250);
+		lblImageInf.setIcon(new ImageIcon(imgPersonaje2));
+		getContentPane().add(lblImageInf);
 		
 		
 
