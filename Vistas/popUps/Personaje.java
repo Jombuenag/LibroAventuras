@@ -80,7 +80,7 @@ public class Personaje extends JFrame {
 		txtField = new JTextField();
 		txtField.setEnabled(false);
 		txtField.setColumns(10);
-		txtField.setBounds(80, 175, 70, 20);
+		txtField.setBounds(80, 175, 55, 20);
 		getContentPane().add(txtField);
 		
 		Image imgPersonaje = new ImageIcon(this.getClass().getResource(("/PersonajeSuperior.png"))).getImage();

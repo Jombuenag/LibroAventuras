@@ -1,0 +1,3 @@
+Te disculpas haciendo ver al frutero que realmente tienes hambre. Este te cede la manzana sintiendo lástima por tí. 
+
+* Se añade una manzana al inventario
